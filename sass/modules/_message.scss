@@ -1,0 +1,25 @@
+.new-message { 
+    span { font-size: 0.8rem; display: block; margin-bottom: 2px; }
+
+    width: 45%;
+    padding: 8px 12px;
+    background: $lightblue;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, $purple, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, $purple, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-radius: 8px;
+    margin-bottom: 1rem;
+
+    float:left;
+    clear: both;
+}
+
+.my-message {
+    float: right !important;
+    background: #ddd6f3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f7a8fa, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f7a8fa, #ddd6f3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    color: #000;
+}
