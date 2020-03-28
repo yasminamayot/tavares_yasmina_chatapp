@@ -9,7 +9,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	//box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
@@ -18,7 +18,7 @@ body {
 }
 
 #chatapp{
-	color: #ed7663;
+	color: $chat;
 	font-family: 'Fredoka One', cursive;
 }
 
@@ -31,11 +31,11 @@ main {
 	height: 100%;
 	overflow: auto;
 	flex-direction: row;
-	background: #E0EAFC;
+	background: #fcedc8;
 	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #CFDEF3, #E0EAFC);
+	background: #fcedc8;
 	/* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #CFDEF3, #E0EAFC);
+	background: #fcedc8;
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -54,7 +54,7 @@ input,
 textarea {
 	display: block;
 	width: 100%;
-	border: 2px solid #bfcfd6;
+	border: 2px solid #c4c4c4;
 	//border-color: #bfcfd6; 
 	border-radius: 4px;
 	font-size: 0.8rem;
@@ -70,7 +70,7 @@ textarea {
 }
 
 textarea {
-	height: 135px;
+	height: 150px;
 }
 
 

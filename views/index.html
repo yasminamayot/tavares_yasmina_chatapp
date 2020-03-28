@@ -38,7 +38,7 @@
     <div class="container">
       <div class="mt-5 jumbotron">
 
-          <h1 class="mb-5 text-center display-5 wow fadeInDown" id="chatapp">Welcome to Chat App!</h1>
+          <h1 class="mb-5 text-center display-5 wow jackInTheBox" id="chatapp">Welcome to Chat App!</h1>
           <div style="border-radius:10px;" class="my-2 px-2 text-center text-white" id="notifications" v-for="notification in notifications">
                 {{ notification }}
           </div>
@@ -50,7 +50,7 @@
             <div class="messages">
               <ul id="messages" v-for="message in messages">
                 <!-- render a new component for every message -->
-                <newmessage :msg="message" class="wow bounceInLeft text-black"></newmessage>
+                <newmessage :msg="message" class="wow fadeInDown text-black"></newmessage>
               </ul>
             </div>
 
