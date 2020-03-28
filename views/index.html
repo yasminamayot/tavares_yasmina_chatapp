@@ -7,7 +7,8 @@
   <title>Chat App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/main.css" />
-  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <!--animate.css plugin-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"
     integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
@@ -37,8 +38,8 @@
     <div class="container">
       <div class="mt-5 jumbotron">
 
-          <h1 class="text-center display-5">Welcome to Chat App!</h1>
-          <div style="border-radius:10px;" class="my-2 px-2 text-center peach-gradient text-white" id="notifications" v-for="notification in notifications">
+          <h1 class="mb-5 text-center display-5 wow fadeInDown" id="chatapp">Welcome to Chat App!</h1>
+          <div style="border-radius:10px;" class="my-2 px-2 text-center text-white" id="notifications" v-for="notification in notifications">
                 {{ notification }}
           </div>
 
@@ -68,13 +69,13 @@
               <h4>Nickname</h4>
             </label>
 
-            <input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What's your nickname?">
+            <input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="ex: annakendrick123">
 
             <form>
               <label for="message">
                 <h4>Your Message</h4>
               </label>
-              <textarea v-model="message" class="message" placeholder="Type your message here..." type="text" autocomplete="off" id="textarea"></textarea>
+              <textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
               <button type="submit" @click.prevent="dispatchMessage" class="btn peach-gradient btn-lg btn-block">SEND</button>
             </form>
 
