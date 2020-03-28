@@ -42,6 +42,7 @@ const vm = new Vue({
 
     },
     watch: {
+      //watches for any value
         message(value) {
           value ? socket.emit('typing', this.nickname) : socket.emit('stoptyping');
         }
@@ -70,6 +71,7 @@ const vm = new Vue({
 
         },
         isTyping() {
+          //when the user begins typing, this emits the user is typing message
           socket.emit('typing', this.nickname);
         },
         
