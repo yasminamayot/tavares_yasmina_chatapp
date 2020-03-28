@@ -32,9 +32,9 @@ io.on("connection", function (socket) {
   //takes the data and then puts it out
   console.log("A new User has joined the chat using socket id" + socket.id);
 
-
+//this emits hasJoined event to the socket/server
   io.emit("hasJoined", {
-    notifications: "A new user has joined the chat!"
+    notifications: "A new user has joined"
   });
 
 
@@ -51,21 +51,23 @@ io.on("connection", function (socket) {
     });
   });
 
-  //listening for typing data and emitting
+  //listening for typing data/event and emitting
   socket.on("typing", data => {
     io.emit("typing", data);
   });
+
+  //listens to stoptyping event and emitting
   socket.on("stoptyping", () => {
     io.emit("stoptyping");
   });
 
-  //user disconnect
+  //disconnect function, on disconnect log to console
   socket.on("disconnect", function (socket) {
     console.log("a user has disconnected");
 
-    //user disconnected msg emit
+    //listening for user disconnected and emitting
     io.emit("hasLeft", {
-      notifications: "A user left"
+      notifications: "A user has left the conversation"
     });
   });
 });

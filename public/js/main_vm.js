@@ -12,15 +12,18 @@ function logConnect({sID}) {
     vm.socketID = sID;
 }
 
+//this is the disconnect function
 function logDisconnect({sID}) { 
     console.log(sID);
     vm.socketID = sID;
 }
 
+//notification/announcement function
 function announcement({notifications}){
     vm.notifications.push(notifications);
 }
 
+//appends/push message through the server to show on screen
 function appendMessage(message) {
     vm.messages.push(message);
 }
@@ -76,6 +79,7 @@ const vm = new Vue({
     }
 }).$mount(`#app`);
 
+//built in variables to use for socket
 socket.on('connected', logConnect);
 socket.on('disconnected', logDisconnect);
 
